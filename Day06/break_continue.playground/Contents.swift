@@ -1,0 +1,29 @@
+// per fer skip a items del loop
+
+let filenames = ["me.jpg", "work.txt", "swift.jpg", "logo.psd"]
+
+// exemple continue
+for filename in filenames {
+    if filename.hasSuffix(".jpg") == false {
+        continue
+    }
+
+    print("Found picture: \(filename)")
+}
+
+// exemple break
+let number1 = 4
+let number2 = 14
+var multiples = [Int]() //array buida, que tindra ints
+
+for i in 1...100_000 {
+    if i.isMultiple(of: number1) && i.isMultiple(of: number2) {
+        multiples.append(i)
+
+        if multiples.count == 10 {
+            break
+        }
+    }
+}
+
+print(multiples)
